@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sansad Record — Nepal's Federal Parliament, tracked</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <h1>Sansad Record</h1>
+      <p class="tagline">A citizen-run record of Nepal's Federal Parliament — members, bills, committees, and what's changed.</p>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="overview" class="tab active">Overview</button>
+    <button data-tab="members" class="tab">Members</button>
+    <button data-tab="bills" class="tab">Bills</button>
+    <button data-tab="committees" class="tab">Committees</button>
+    <button data-tab="history" class="tab">History</button>
+  </nav>
+
+  <main>
+    <section id="overview" class="panel active">
+      <h2>What this is</h2>
+      <p>Sansad Record pulls directly from the Federal Parliament Secretariat's own published pages — members, bill status, and committee assignments — and keeps a running log of what changes and when. Nothing here is editorial; every figure links back to its source.</p>
+      <div id="overview-stats" class="stat-row"></div>
+      <p class="data-note">Data refreshes automatically every few hours. Last refresh time is shown per section below.</p>
+    </section>
+
+    <section id="members" class="panel">
+      <h2>Members</h2>
+      <input type="search" id="member-search" placeholder="Search by name, constituency, or party" class="search-box">
+      <p id="members-meta" class="data-note"></p>
+      <table class="data-table" id="members-table">
+        <thead><tr><th>Name</th><th>Chamber</th><th>Constituency</th><th>Party</th><th>Role</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="bills" class="panel">
+      <h2>Bills</h2>
+      <p id="bills-meta" class="data-note"></p>
+      <table class="data-table" id="bills-table">
+        <thead><tr><th>Title</th><th>House</th><th>Status</th><th>Last action</th><th>Committee</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="committees" class="panel">
+      <h2>Committees</h2>
+      <p id="committees-meta" class="data-note"></p>
+      <ul class="committee-list" id="committee-list"></ul>
+    </section>
+
+    <section id="history" class="panel">
+      <h2>History</h2>
+      <p class="data-note">Every detected change to a member, bill, or committee — oldest at the bottom, newest at the top.</p>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Data sourced from <a href="https://hr.parliament.gov.np/en" target="_blank" rel="noopener">hr.parliament.gov.np</a>. Independent civic project — not affiliated with the Federal Parliament Secretariat.</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
